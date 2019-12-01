@@ -15,14 +15,6 @@ $(document).ready(function () {
     }
     firstRenderButtons();
 
-    // if (localStorage.getItem("cities") === null) {
-    //     var cities = [];
-    // } else {var cities = localStorage.getItem("cities")}
-
-    // cities.push(JSON.parse(localStorage.getItem('session')));
-    // localStorage.setItem('cityList', JSON.stringify(cities));
-
-    // console.log("cities are:" + cities);
 
     $("#searchButt").on("click", function (event) {
         event.preventDefault();
@@ -38,21 +30,7 @@ $(document).ready(function () {
             console.log(response);
             console.log(response.name);
 
-            // var cities = [];
-            // function SaveDataToLocalStorage(data)
-            // {
-            //     var cities = [];
-            //     // Parse the serialized data back into an aray of objects
-            //     cities = JSON.parse(localStorage.getItem('cityList'));
-            //     // Push the new data (whether it be an object or anything else) onto the array
-            //     cities.push(data);
-            //     // Re-serialize the array back into a string and store it in localStorage
-            //     localStorage.setItem('cityList', JSON.stringify(cities));
-            // }
-
-            // var city = response.name;
-            // SaveDataToLocalStorage(city);
-            // cities.push(city);
+     
             //on click you get info, 
             //clear info
             $("#weathInfo").text("");
@@ -87,7 +65,7 @@ $(document).ready(function () {
             renderButtons();
 
             function uviGet() {
-                var queryURL2 = "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=9c338cb2b817b874cb2c32afd42f6cbb&lat=" + lat + "&lon=" + long + "";
+                var queryURL2 = "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=9c338cb2b817b874cb2c32afd42f6cbb&lat=" + lat + "&lon=" + long + "";
                 $.ajax({
                     url: queryURL2,
                     method: "GET"
@@ -102,7 +80,7 @@ $(document).ready(function () {
                 })
             }
             function fiveDayGet() {
-                var queryURL3 = "http://api.openweathermap.org/data/2.5/forecast?appid=9c338cb2b817b874cb2c32afd42f6cbb&q=" + response.name + "&units=imperial";
+                var queryURL3 = "https://api.openweathermap.org/data/2.5/forecast?appid=9c338cb2b817b874cb2c32afd42f6cbb&q=" + response.name + "&units=imperial";
                 $.ajax({
                     url: queryURL3,
                     method: "GET"
