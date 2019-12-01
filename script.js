@@ -21,7 +21,6 @@ $(document).ready(function () {
         var apiKey = "9c338cb2b817b874cb2c32afd42f6cbb";
         var userInput = $("input").val();
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userInput + "&appid=" + apiKey;
-        //var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=Seattle&appid=" +apiKey;
 
         $.ajax({
             url: queryURL,
@@ -36,7 +35,7 @@ $(document).ready(function () {
             $("#weathInfo").text("");
             $("#fiveDayBox").text("");
             //post called info to text feilds,
-            $("#weathInfo").html("<h1>" + response.name + " (" + moment().format('l') + ")<img src='http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png'></h1>");
+            $("#weathInfo").html("<h1>" + response.name + " (" + moment().format('l') + ")<img src='https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png'></h1>");
             console.log(response.weather[0].icon);
             console.log(queryURL);
             var tempK = response.main.temp;
@@ -95,19 +94,19 @@ $(document).ready(function () {
                         $("#fiveDayBox").append(a);
                     };
                     //i could not figure out how to do this in a loop
-                    $(".blueBox").eq(0).append("<br><img src='http://openweathermap.org/img/wn/" + response3.list[4].weather[0].icon + ".png'>");
+                    $(".blueBox").eq(0).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[4].weather[0].icon + ".png'>");
                     $(".blueBox").eq(0).append("<br>Temp: " + response3.list[4].main.temp);
                     $(".blueBox").eq(0).append("<br>Humidity: " + response3.list[4].main.humidity);
-                    $(".blueBox").eq(1).append("<br><img src='http://openweathermap.org/img/wn/" + response3.list[12].weather[0].icon + ".png'>");
+                    $(".blueBox").eq(1).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[12].weather[0].icon + ".png'>");
                     $(".blueBox").eq(1).append("<br>Temp: " + response3.list[12].main.temp);
                     $(".blueBox").eq(1).append("<br>Humidity: " + response3.list[12].main.humidity);
-                    $(".blueBox").eq(2).append("<br><img src='http://openweathermap.org/img/wn/" + response3.list[20].weather[0].icon + ".png'>");
+                    $(".blueBox").eq(2).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[20].weather[0].icon + ".png'>");
                     $(".blueBox").eq(2).append("<br>Temp: " + response3.list[20].main.temp);
                     $(".blueBox").eq(2).append("<br>Humidity: " + response3.list[20].main.humidity);
-                    $(".blueBox").eq(3).append("<br><img src='http://openweathermap.org/img/wn/" + response3.list[28].weather[0].icon + ".png'>");
+                    $(".blueBox").eq(3).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[28].weather[0].icon + ".png'>");
                     $(".blueBox").eq(3).append("<br>Temp: " + response3.list[28].main.temp);
                     $(".blueBox").eq(3).append("<br>Humidity: " + response3.list[28].main.humidity);
-                    $(".blueBox").eq(4).append("<br><img src='http://openweathermap.org/img/wn/" + response3.list[36].weather[0].icon + ".png'>");
+                    $(".blueBox").eq(4).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[36].weather[0].icon + ".png'>");
                     $(".blueBox").eq(4).append("<br>Temp: " + response3.list[36].main.temp);
                     $(".blueBox").eq(4).append("<br>Humidity: " + response3.list[36].main.humidity);
                     // but i tried- 4 12 20 28 36
