@@ -1,0 +1,47 @@
+ header {
+            background-color: rgb(48, 47, 49);
+            color: white;
+            text-align: center;
+        }
+
+        #searchBg {
+            background-color: rgb(228, 235, 248);
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        #searchButt {
+            background-color: crimson;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        #weatherBox {
+            border-radius: 10px;
+            border: solid 2px rgb(230, 230, 255);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        .cityButt {
+            width: 100%;
+            background-color: white;
+            border: solid 1px lightskyblue;
+            padding: 10px;
+            text-align: left;
+        }
+        .blueBox {
+            border-radius: 5px;
+            background-color: rgb(10, 132, 253);
+            color: white;
+            padding : 10px;
+            width: 150px;
+            display: inline-block;
+            margin: 15px;
+            line-height: 30px;
+            white-space: pre;
+        }
