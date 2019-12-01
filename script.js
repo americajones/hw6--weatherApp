@@ -75,7 +75,7 @@ $(document).ready(function () {
                     // console.log("inner ajax lon=" + long);
                     // console.log("inner uvi URL=" + queryURL2);
                     $("#list").append("<li>UV Index: <span>" + response2[0].value + "</span></li>");
-                    $("span").css({ "background-color": "lightblue", "border-radius": "3px", "padding": "6px" })
+                    $("span").css({ "background-color": "black", "border-radius": "3px", "padding": "6px" })
                 })
             }
             function fiveDayGet() {
@@ -95,19 +95,19 @@ $(document).ready(function () {
                     };
                     //i could not figure out how to do this in a loop
                     $(".blueBox").eq(0).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[4].weather[0].icon + ".png'>");
-                    $(".blueBox").eq(0).append("<br>Temp: " + response3.list[4].main.temp);
+                    $(".blueBox").eq(0).append("<br>Temp: " + response3.list[4].main.temp + "°F");
                     $(".blueBox").eq(0).append("<br>Humidity: " + response3.list[4].main.humidity);
                     $(".blueBox").eq(1).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[12].weather[0].icon + ".png'>");
-                    $(".blueBox").eq(1).append("<br>Temp: " + response3.list[12].main.temp);
+                    $(".blueBox").eq(1).append("<br>Temp: " + response3.list[12].main.temp + "°F");
                     $(".blueBox").eq(1).append("<br>Humidity: " + response3.list[12].main.humidity);
                     $(".blueBox").eq(2).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[20].weather[0].icon + ".png'>");
-                    $(".blueBox").eq(2).append("<br>Temp: " + response3.list[20].main.temp);
+                    $(".blueBox").eq(2).append("<br>Temp: " + response3.list[20].main.temp + "°F");
                     $(".blueBox").eq(2).append("<br>Humidity: " + response3.list[20].main.humidity);
                     $(".blueBox").eq(3).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[28].weather[0].icon + ".png'>");
-                    $(".blueBox").eq(3).append("<br>Temp: " + response3.list[28].main.temp);
+                    $(".blueBox").eq(3).append("<br>Temp: " + response3.list[28].main.temp + "°F");
                     $(".blueBox").eq(3).append("<br>Humidity: " + response3.list[28].main.humidity);
                     $(".blueBox").eq(4).append("<br><img src='https://openweathermap.org/img/wn/" + response3.list[36].weather[0].icon + ".png'>");
-                    $(".blueBox").eq(4).append("<br>Temp: " + response3.list[36].main.temp);
+                    $(".blueBox").eq(4).append("<br>Temp: " + response3.list[36].main.temp + "°F");
                     $(".blueBox").eq(4).append("<br>Humidity: " + response3.list[36].main.humidity);
                     // but i tried- 4 12 20 28 36
                     // for (var j = 4; j < 36; j+8) {
